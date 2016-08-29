@@ -26,6 +26,7 @@ public abstract class Stemmer {
 		s.applyRule(Rules.r1c);
 		applyRules(s,Rules.Rules2);
 		applyRules(s,Rules.Rules3);
+
 	}
 	
 	private static void applyRules(Stem s,Rule[] rules) {

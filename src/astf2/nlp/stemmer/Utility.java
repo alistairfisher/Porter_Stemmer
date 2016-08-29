@@ -3,18 +3,18 @@ package astf2.nlp.stemmer;
 public abstract class Utility {
 	
 	static boolean isaVowel(String s,int n) {
-		char v = s.charAt(n);
+		if (s.length() == 0) return false;
+		char v = Character.toLowerCase(s.charAt(n));
 		if (v=='a'||v=='e'||v=='i'||v=='o'||v=='u')
 			return true;
-		else if (v=='y') {
+		else if (v=='y' && n > 0) {
 			return isaConsonant(s,(n-1));
 		}
 		else return false;
 	}
 
 	static boolean isaConsonant(String s,int n) {
-		if (n<0) return false;
-		else return !(isaVowel(s,n));
+      return !(isaVowel(s,n));
 	}
 
 	static boolean containsVowel(String s) {

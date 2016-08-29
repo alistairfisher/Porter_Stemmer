@@ -6,7 +6,7 @@ public class Representation {
 	int measure;
 	
 	Representation(String s) {
-		word = s;
+		word = s.toLowerCase();
 		this.measure = get_measure(s);
 		//TODO complete parser
 	}
